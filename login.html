@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Coworking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f3f3f3, #e2e2e2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: rgb(1, 160, 35);
+            text-decoration: none;
+        }
+
+        .Painel-Login {
+            background-color: #fff;
+            padding: 30px 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .Painel-Login img {
+            width: 135px;
+            margin-bottom: 20px;
+        }
+
+        .Inputs {
+            margin-bottom: 20px;
+        }
+
+        .Inputs p {
+            margin: 0;
+            text-align: left;
+        }
+
+        .Inputs input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .BTN-acessar {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(30, 30, 30);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .BTN-acessar:hover {
+            background-color: rgb(58, 56, 56);
+        }
+
+        .Painel-Login ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            margin: 20px 0 0;
+            list-style: none;
+        }
+
+        .Painel-Login ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .Painel-Login ul li:first-child a {
+            color: rgb(37, 161, 64);
+        }
+
+        .Painel-Login ul li a:hover {
+            color: rgb(129, 182, 126);
+        }
+    </style>
+</head>
+<body>
+    <div class="breadcrumb">
+        <a href="index.html">HOME</a> / Login
+    </div>
+    
+    <div class="Painel-Login" id="parte1">
+        <img src="logo.png" alt="Logo">
+        <div class="Inputs">
+            <p>CPF</p>
+            <input type="text" id="cpf" class="cpf-input" maxlength="14" placeholder="Digite seu CPF">
+            <p>Senha</p>
+            <input type="password" placeholder="Digite sua senha">
+        </div>
+        <ul class="OP-LoginRegistro">
+            <li><a href="Registro.html">Primeiro Acesso?</a></li>
+            <li><a href="#">Esqueceu a Senha?</a></li>
+        </ul>
+        <br><br>
+        <a href="index.html" class="BTN-acessar">Acessar</a>
+    </div>
+
+    <script>
+        document.getElementById('cpf').addEventListener('input', function(e) {
+            let input = e.target.value;
+            input = input.replace(/\D/g, ''); 
+            input = input.replace(/(\d{3})(\d)/, '$1.$2'); 
+            input = input.replace(/(\d{3})(\d)/, '$1.$2'); 
+            input = input.replace(/(\d{3})(\d)/, '$1-$2');
+            e.target.value = input;
+        });
+    </script>
+</body>
+</html>
