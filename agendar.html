@@ -105,6 +105,22 @@
         .form-step.active {
             display: block;
         }
+        select {
+            width: 18%;
+            padding: 1%;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9; 
+            font-size: 14px;
+        }
+        select option {
+            background-color: #f9f9f9;
+            color: #333; 
+        }
+        select:focus {
+            border-color: #007a40;
+            outline: none;
+        }
     </style>
 </head>
 <body>
@@ -123,6 +139,15 @@
                     <option value="valor1">Barueri</option>
                     <option value="valor2" selected>São Paulo</option>
                     <option value="valor3" selected>Virtual</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nascimento">Número de Funcionários</label>
+                <select name="select">
+                    <option value="valor1">1-10</option>
+                    <option value="valor2" selected>1 - 50</option>
+                    <option value="valor3" selected>1 - 100</option>
+                    <option value="valor3" selected>1 - ထ</option>
                 </select>
             </div>
             <div class="form-group">
