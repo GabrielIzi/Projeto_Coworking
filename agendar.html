@@ -134,20 +134,20 @@
             <h3>Faça sua reserva:</h3>
             <br>
             <div class="form-group">
-                <label for="nascimento">Local do Escritório</label>
-                <select name="select">
+                <label for="local">Local do Escritório</label>
+                <select name="local" id="local">
                     <option value="valor1">Barueri</option>
-                    <option value="valor2" selected>São Paulo</option>
-                    <option value="valor3" selected>Virtual</option>
+                    <option value="valor2">São Paulo</option>
+                    <option value="valor3">Virtual</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="nascimento">Número de Funcionários</label>
-                <select name="select">
+                <label for="funcionarios">Número de Funcionários</label>
+                <select name="funcionarios" id="funcionarios">
                     <option value="valor1">1 - 10</option>
-                    <option value="valor2" selected>1 - 50</option>
-                    <option value="valor3" selected>1 - 100</option>
-                    <option value="valor3" selected>1 - ထ</option>
+                    <option value="valor2">1 - 50</option>
+                    <option value="valor3">1 - 100</option>
+                    <option value="valor4">1 - Infinito</option>
                 </select>
             </div>
             <div class="form-group">
@@ -165,5 +165,32 @@
             <a href="results.html" class="btn" >Procurar <i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
     </div>
+    <script>
+        const localSelect = document.getElementById('local');
+        const funcionariosSelect = document.getElementById('funcionarios');
+
+        function checkVirtual() {
+            const optionInfinito = funcionariosSelect.querySelector('option[value="valor4"]');
+
+            if(localSelect.value === 'valor3'){ 
+                optionInfinito.selected = true; 
+                optionInfinito.disabled = true;
+                for (let option of funcionariosSelect.options){
+                    if (option.value !== "valor4"){
+                        option.disabled = true;
+                    }
+                }
+            }else{
+                optionInfinito.disabled = false;
+                for(let option of funcionariosSelect.options){
+                    option.disabled = false;
+                }
+                optionInfinito.disabled = true;
+                funcionariosSelect.value = 'valor1';
+            }
+        }
+        localSelect.addEventListener('change', checkVirtual);
+        checkVirtual();
+    </script>
 </body>
 </html>
