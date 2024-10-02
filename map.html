@@ -16,22 +16,18 @@
             flex-direction: column;
             align-items: center;
         }
-
         .header {
             margin: 20px;
             width: 80%;
             text-align: left; 
         }
-
         .home_map {
             font-size: 14px;
         }
-
         .home_map a {
             color: rgb(1, 160, 35);
             text-decoration: none;
         }
-
         .home_map a:hover {
             text-decoration: underline;
         }
@@ -53,36 +49,29 @@
             margin-top: 0px;
             color: #333;
         }
-
         footer {
             text-align: center;
             padding: 20px 0;
             margin-top: 50px;
         }
-
         footer p {
             margin: 5px 0;
         }
-
         footer a {
             color: #00a651;
             text-decoration: none;
             margin: 0 10px;
         }
-
         footer a:hover {
             color: #007a40;
         }
-
         footer i{
             font-size: 1.5rem;
         }
-
         .phone-icon i {
             font-size: 1rem;
             color:#00a651;
         }
-
         #map {
             height: 400px;
             width: 80%;
@@ -91,6 +80,22 @@
             border: 2px solid rgb(1, 160, 35);
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.753); 
+        }
+        body p i{
+            color: #007a40;
+        }
+        body p i:hover{
+            color:#00a651;
+            cursor: pointer;
+        }
+        .avaliacao-5 i {
+            color: #ccc;
+        }
+        .avaliacao-5 i:nth-child(-n+3) {
+            color: #00a651;
+        }
+        .avaliacao-3 i {
+            color: #00a651;
         }
     </style>
 </head>
@@ -102,10 +107,19 @@
         <h3>Localização de nossas unidades:</h3>
     </div>
     <div id="map"></div>
+
     <h4 class="phone-icon" ><i class="fa-solid fa-map"></i> <a href="#">São Paulo</a></h4>
-    <p>Rua Frederico Grotte, 156 - Jardim Sao Luiz</p>
+    <p>Rua Frederico Grotte, 156 - Jardim Sao Luiz <i class="fa-regular fa-copy"></i></p>
+    <div class="avaliacao avaliacao-3">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    </div>
+    <br><br>
+
     <h4 class="phone-icon" ><i class="fa-solid fa-map"></i> <a href="#">Barueri</a></h4>
-    <p>Av. Henriqueta Mendes Guerra, 100 - Vila Sao Joao</p>
+    <p>Av. Henriqueta Mendes Guerra, 100 - Vila Sao Joao <i class="fa-regular fa-copy"></i></p>
+    <div class="avaliacao avaliacao-5">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    </div>
 
     <footer>
         <p>&copy; 2024 Coworking+.</p>
