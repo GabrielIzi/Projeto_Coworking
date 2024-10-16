@@ -21,7 +21,6 @@
         }
 
         .Menu-Bar {
-            border-bottom: 2px solid rgb(18, 211, 28);
             margin: 0;
             padding: 0;
         }
@@ -52,8 +51,9 @@
             width: 70%;
         }
 
-        .Menu-Bar img {
-            width: 30%;
+        .Menu-Bar ul img {
+            margin-top: 5px;
+            width: 100px;
             height: auto;
         }
 
@@ -63,7 +63,6 @@
 
         .operacoes {
             text-align: center;
-            margin-top: 10%;
         }
 
         .operacoes a {
@@ -219,6 +218,48 @@
             transform: scale(1.05);
         }
 
+        .avaliacoes{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin-left: 5%;
+        }
+        .avaliacao img{
+            margin-top: 5px;
+            width: 5rem;
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .avaliacao {
+            background-color:#fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .avaliacao p {
+            margin: 5%;
+            color: #444;
+        }
+        .usuario{
+            display: flex;
+        }
+        section{
+            background: 
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255) 100%),
+        url(back-ground.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 10% 5%;
+        }
+        section h1{
+            text-align: center;
+            color: #333;
+            margin-bottom: 3%;
+        }
+
         @keyframes fadeIn {
             to {
                 opacity: 1;
@@ -244,6 +285,15 @@
             .Menu-Bar ul li a{
                 margin-left: 70%;
             }
+            .news-item p {
+                font-size: 0.675rem;
+            }
+            .news-item h5 {
+                font-size: 1rem;
+            }
+            .container h1{
+                font-size: 1.25rem;
+            }
 
         }
     </style>
@@ -255,15 +305,15 @@
             <li class="BTN-Entrar"><a href="login.html">Entrar <i class="fas fa-user"></i></a></li>
         </ul>
     </div>
-    
-    <h3>Projeto de Coworking:</h3>
-    
-    <div class="operacoes">
-        <a href="agendar.html"><i class="fas fa-calendar-alt"></i> Agendar</a>
-        <a href="meus_agendamentos.html"><i class="fas fa-list"></i> Meus Agendamentos</a>
-        <a href="map.html"><i class="fa-solid fa-location-dot"></i> Localizações</a>
-    </div>
-    <br><br><br><br><br>
+    <section>
+        <h1>Coworking+</h1>
+        <div class="operacoes">
+            <a href="agendar.html"><i class="fas fa-calendar-alt"></i> Agendar</a>
+            <a href="meus_agendamentos.html"><i class="fas fa-list"></i> Meus Agendamentos</a>
+            <a href="map.html"><i class="fa-solid fa-location-dot"></i> Localizações</a>
+        </div>
+    </section>
+    <br>
     <div class="container">
         <h1>Planos Disponíveis:</h1>
         <div class="news-item">
@@ -342,6 +392,37 @@
                 <p>- A possibilidade de interagir com profissionais de diferentes partes do mundo em um ambiente compartilhado, favorecendo o surgimento de parcerias e projetos globais, sem barreiras físicas.</p>
                 <p>- Workshops e treinamentos podem ser realizados em ambientes interativos, permitindo simulações práticas, aprendizado mais envolvente e capacitação de habilidades em diferentes áreas, como design, programação ou vendas.</p>
             </div>
+        </div>
+    </div>
+    <br>
+    <div class="avaliacoes">
+        <div class="avaliacao">
+            <div class="usuario">
+                <img src="logo.png" alt="">
+                <h4>Lucas Almeida</h4>
+            </div>
+            <p>"O coworking superou minhas expectativas. O ambiente é limpo, moderno e muito confortável, com várias opções de estações de trabalho. Além disso, há uma ótima oportunidade de networking com outros profissionais. Um ótimo investimento para aumentar a produtividade."</p>
+        </div>
+        <div class="avaliacao">
+            <div class="usuario">
+                <img src="logo.png" alt="">
+                <h4>Mariana Costa</h4>
+            </div>
+            <p>"Achei o espaço de coworking satisfatório. Ele oferece as necessidades básicas, como internet e áreas de trabalho variadas, mas não se destaca em termos de comodidades ou serviços extras. É uma escolha ok para quem não precisa de muitos recursos adicionais."</p>
+        </div>
+        <div class="avaliacao">
+            <div class="usuario">
+                <img src="logo.png" alt="">
+                <h4>Felipe Silva</h4>
+            </div>
+            <p>"Excelente ambiente para trabalhar! O espaço de coworking é bem organizado, com boa infraestrutura e muitas opções de locais para se acomodar. A internet é rápida e estável, e a atmosfera é inspiradora. Recomendo para quem precisa de um lugar produtivo fora de casa."</p>
+        </div>
+        <div class="avaliacao">
+            <div class="usuario">
+                <img src="logo.png" alt="">
+                <h4>Aline Ferreira</h4>
+            </div>
+            <p>"O coworking é bom, mas poderia ser melhor. A estrutura é adequada, e o espaço é confortável, mas o ambiente às vezes é um pouco movimentado demais para quem precisa de concentração. No geral, é uma opção válida para quem busca uma alternativa ao home office."</p>
         </div>
     </div>
 
